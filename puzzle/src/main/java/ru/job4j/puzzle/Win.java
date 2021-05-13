@@ -15,9 +15,12 @@ public class Win {
     }
 
     public static boolean checkHorizont(int[][] board, int row) {
-        boolean result = false;
+        boolean result = true;
         for (int cell = 0; cell < board.length; cell++) {
-            result = board[row][cell] == 1;
+            if (board[row][cell] != 1) {
+                result = false;
+                break;
+            }
         }
         return result;
     }
@@ -25,8 +28,13 @@ public class Win {
     public static boolean checkVertical(int[][] board, int cell) {
         boolean result = true;
         for (int row = 0; row < board.length; row++) {
-            result = board[row][cell] == 1;
+            if (board[row][cell] != 1) {
+                result = false;
+                break;
+            }
         }
         return result;
     }
 }
+
+
