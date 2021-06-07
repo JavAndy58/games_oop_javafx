@@ -24,6 +24,7 @@ public class BishopBlackTest {
         Figure bishopBlack1 = bishopBlack.copy(Cell.A2);
         assertThat(Cell.A2, is(bishopBlack1.position()));
     }
+
     @Test
     public void whenWay() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C1);
