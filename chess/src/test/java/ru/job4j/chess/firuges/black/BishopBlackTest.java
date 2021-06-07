@@ -32,5 +32,11 @@ public class BishopBlackTest {
         assertThat(steps, is(steps2));
     }
 
-
+    @Test
+    public void whenWayException() {
+        BishopBlack bishopBlack1 = new BishopBlack(Cell.C1);
+        BishopBlack bishopBlack2 = new BishopBlack(Cell.C2);
+        boolean result = bishopBlack1.isDiagonal(bishopBlack1.position(), bishopBlack2.position());
+        assertThat(result, is(false));
+    }
 }
